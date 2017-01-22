@@ -1,5 +1,7 @@
 package com.yyq.holiday.service.country;
 
+import com.yyq.holiday.common.result.Result;
+import com.yyq.holiday.common.resultbo.CountryBO;
 import com.yyq.holiday.domain.entity.country.CountryDO;
 
 /**
@@ -16,5 +18,5 @@ public interface CountryService {
      * @param code 国家编号
      * @return 国家信息
      */
-    CountryDO queryCountryDOByCode(String code);
+    Result<CountryBO> queryCountryDOByCode(String code);
 }

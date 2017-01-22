@@ -1,17 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	   xmlns:util="http://www.springframework.org/schema/util"
+       xmlns:util="http://www.springframework.org/schema/util"
        xmlns:mvc="http://www.springframework.org/schema/mvc"
-       xmlns="http://www.springframework.org/schema/beans"
+       xmlns="http://www.springframework.org/schema/beans" xmlns:context="http://www.springframework.org/schema/context"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
 	   http://www.springframework.org/schema/beans/spring-beans-4.2.xsd
 	   http://www.springframework.org/schema/mvc  
        http://www.springframework.org/schema/mvc/spring-mvc-4.2.xsd
        http://www.springframework.org/schema/util 
-	   http://www.springframework.org/schema/util/spring-util-4.2.xsd">
+	   http://www.springframework.org/schema/util/spring-util-4.2.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
 
     <!--相当于注册了DefaultAnnotationHandlerMapping和AnnotationMethodHandlerAdapter两个bean，
     配置一些messageconverter。即解决了@Controller注解的使用前提配置。-->
+    <context:component-scan base-package="com.yyq.holiday.web" />
+    <mvc:annotation-driven/>
     <mvc:annotation-driven>
         <mvc:message-converters register-defaults="true">
             <!-- 将StringHttpMessageCOnverter的默认编码设为UTF-8 -->

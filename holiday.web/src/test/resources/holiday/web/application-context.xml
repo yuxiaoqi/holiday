@@ -9,7 +9,7 @@
 
     <context:property-placeholder location="holiday/web/application.properties" />
     <!--<context:property-placeholder location="classpath:sys.properties" />-->
-    <context:component-scan base-package="com.yyq"/>
+    <context:component-scan base-package="com.yyq.holiday.manager"/>
     <aop:aspectj-autoproxy/>
 
     <import resource="mybatis-config.xml" />

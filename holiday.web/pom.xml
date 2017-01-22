@@ -16,6 +16,21 @@
             <version>3.8.1</version>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>yyq.com</groupId>
+            <artifactId>holiday.manager</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>yyq.com</groupId>
+            <artifactId>holiday.common</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>yyq.com</groupId>
+            <artifactId>holiday.service</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
     </dependencies>
     <build>
         <finalName>holiday.web</finalName>

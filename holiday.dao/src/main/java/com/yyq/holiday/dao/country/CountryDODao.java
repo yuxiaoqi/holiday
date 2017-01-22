@@ -1,8 +1,9 @@
 package com.yyq.holiday.dao.country;
 
 
-import com.yyq.holiday.domain.entity.country.CountryDO;
 import com.yyq.holiday.dao.common.MyBatisRepository;
+import com.yyq.holiday.domain.entity.country.CountryDO;
+import org.springframework.stereotype.Repository;
 
 @MyBatisRepository
 public interface CountryDODao {

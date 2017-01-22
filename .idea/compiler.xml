@@ -22,22 +22,28 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
-        <module name="holiday.common" />
         <module name="holiday.dao" />
         <module name="holiday.domain" />
         <module name="holiday.manager" />
         <module name="holiday.service" />
         <module name="holiday.web" />
       </profile>
+      <profile default="false" name="Annotation profile for holiday.common" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="holiday.common" />
+      </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="1.7">
-      <module name="holiday" target="1.7" />
+      <module name="holiday" target="1.5" />
       <module name="holiday.common" target="1.7" />
-      <module name="holiday.dao" target="1.7" />
-      <module name="holiday.domain" target="1.7" />
-      <module name="holiday.manager" target="1.7" />
-      <module name="holiday.service" target="1.7" />
-      <module name="holiday.web" target="1.7" />
+      <module name="holiday.dao" target="1.5" />
+      <module name="holiday.domain" target="1.5" />
+      <module name="holiday.manager" target="1.5" />
+      <module name="holiday.service" target="1.5" />
+      <module name="holiday.web" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>
