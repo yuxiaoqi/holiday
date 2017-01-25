@@ -1,0 +1,4 @@
+jdbc.driverClassName=${jdbc_driverClassName}
+jdbc.url=${jdbc_url}
+jdbc.username=${jdbc_username}
+jdbc.password=${jdbc_password}

@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<configuration debug="false">
+    <property name="yyq_log_pattern" value = "${yyq_log_pattern}" />
+    <property name="LOG_CHARSET" value="${yyq_log_charset}" />
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <!-- encoders are assigned the typeR
+             ch.qos.logback.classic.encoder.PatternLayoutEncoder by default -->
+        <encoder>
+            <pattern>${yyq_log_pattern}</pattern>
+        </encoder>
+    </appender>
+    <appender name="COMMON" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${yyq_log_root}/common.log</file>
+        <append>true</append>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${yyq_log_root}/common.%d{yyyy-MM-dd}.log</fileNamePattern>
+            <maxHistory>30</maxHistory>
+        </rollingPolicy>
+        <encoder>
+            <charset>${yyq_log_charset}</charset>
+            <pattern>${yyq_log_pattern}</pattern>
+        </encoder>
+    </appender>
+    <appender name="ERROR" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${yyq_log_root}/error.log</file>
+        <append>true</append>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${yyq_log_root}/error.%d{yyyy-MM-dd}.log</fileNamePattern>
+        </rollingPolicy>
+        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+            <level>ERROR</level>
+        </filter>
+        <encoder>
+            <charset>${yyq_log_charset}</charset>
+            <pattern>${yyq_log_pattern}</pattern>
+        </encoder>
+    </appender>
+    <logger name="com.yyq.holiday" additivity="false">
+        <level value="DEBUG" />
+        <appender-ref ref="COMMON" />
+        <appender-ref ref="ERROR" />
+        <appender-ref ref="STDOUT"/>
+    </logger>
+    <logger name="com.yyq.holiday.dao" additivity="false">
+        <level value="DEBUG" />
+        <appender-ref ref="ERROR" />
+        <appender-ref ref="STDOUT"/>
+    </logger>
+    <logger name="java.sql" additivity="false">
+        <level value="DEBUG" />
+        <appender-ref ref="ERROR" />
+    </logger>
+    <logger name="java.sql.ResultSet" additivity="false">
+        <level value="INFO" />
+        <appender-ref ref="ERROR" />
+    </logger>
+    <logger name="java.sql.Connection" level="DEBUG" />
+    <logger name="java.sql.Statement" additivity="true">
+        <level value="DEBUG"/>
+    </logger>
+
+    <logger name="java.sql.PreparedStatement" additivity="true">
+        <level value="DEBUG"/>
+    </logger>
+    <logger name="jndi" additivity="false">
+        <level value="INFO" />
+    </logger>
+    <logger name="net.sf.ehcache" additivity="false">
+        <level value="ERROR" />
+    </logger>
+    <logger name="org.apache" additivity="false">
+        <level value="WARN" />
+    </logger>
+    <logger name="org.apache.commons.beanutils.converters" additivity="false">
+        <level value="ERROR" />
+    </logger>
+    <logger name="org.apache.velocity" additivity="false">
+        <level value="INFO" />
+    </logger>
+    <logger name="org.directwebremoting" additivity="false">
+        <level value="INFO" />
+        <appender-ref ref="REMOTE" />
+        <appender-ref ref="ERROR" />
+    </logger>
+    <logger name="org.eclipse.jetty" additivity="false">
+        <level value="INFO" />
+    </logger>
+    <logger name="org.mitre" additivity="false">
+        <level value="info" />
+    </logger>
+    <logger name="org.mybatis.spring" additivity="false">
+        <level value="DEBUG" />
+        <appender-ref ref="ERROR" />
+        <appender-ref ref="STDOUT"/>
+    </logger>
+    <logger name="org.quartz" additivity="false">
+        <level value="info" />
+        <appender-ref ref="SCHEDULE" />
+        <appender-ref ref="ERROR" />l
+    </logger>
+    <logger name="org.springframework" additivity="false">
+        <level value="INFO" />
+        <appender-ref ref="ERROR" />
+    </logger>
+    <logger name="org.springframework.security" additivity="false">
+        <level value="ERROR" />
+    </logger>
+    <logger name="org.springframework.scheduling" additivity="false">
+        <level value="DEBUG" />
+        <appender-ref ref="SCHEDULE" />
+        <appender-ref ref="ERROR" />
+    </logger>
+    <logger name="sign" additivity="false">
+        <level value="${yyq_log_level}" />
+        <appender-ref ref="SIGN"/>
+    </logger>
+    <logger name="org.I0Itec.zkclient" additivity="false">
+        <level value="ERROR" />
+        <appender-ref ref="ERROR"/>
+    </logger>
+    <logger name="com.alibaba.dubbo" additivity="false">
+        <level value="ERROR" />
+        <appender-ref ref="ERROR"/>
+    </logger>
+    <logger name="com.alibaba.dubbo.registry.zookeeper.ZookeeperRegistry" additivity="false">
+        <level value="ERROR" />
+    </logger>
+    <root>
+        <level value="${yyq_log_level}" />
+        <appender-ref ref="COMMON" />
+        <appender-ref ref="ERROR" />
+        <appender-ref ref="STDOUT"/>
+    </root>
+
+</configuration>

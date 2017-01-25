@@ -33,7 +33,9 @@ public class CountryServiceImpl implements CountryService{
     @Override
     public Result<CountryBO> queryCountryDOByCode(String code) {
         //参数校验
+        log.info("参数校验方法开始==>{}",code);
         CountryDO countryDO = countryManager.queryCountryDOByCode(code);
+        log.info("方法结束调用");
         return Result.wrapSuccessfulResult(this.convertcountryDO2BO(countryDO));
 
     }
