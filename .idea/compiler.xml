@@ -37,13 +37,13 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="1.7">
-      <module name="holiday" target="1.5" />
+      <module name="holiday" target="1.7" />
       <module name="holiday.common" target="1.7" />
-      <module name="holiday.dao" target="1.5" />
-      <module name="holiday.domain" target="1.5" />
-      <module name="holiday.manager" target="1.5" />
-      <module name="holiday.service" target="1.5" />
-      <module name="holiday.web" target="1.5" />
+      <module name="holiday.dao" target="1.7" />
+      <module name="holiday.domain" target="1.7" />
+      <module name="holiday.manager" target="1.7" />
+      <module name="holiday.service" target="1.7" />
+      <module name="holiday.web" target="1.7" />
     </bytecodeTargetLevel>
   </component>
 </project>

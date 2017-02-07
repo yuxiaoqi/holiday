@@ -25,7 +25,7 @@ public class CountryController {
 
     @ResponseBody
     @RequestMapping("/query")
-    public Result<CountryBO>  queryCountryInfoByCode(String code){
+    public Result<CountryBO>  queryCountryInfoByCode(String code ,String test){
         return countryService.queryCountryDOByCode(code);
     }
 
