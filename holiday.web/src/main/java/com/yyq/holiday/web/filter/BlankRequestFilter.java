@@ -30,6 +30,7 @@ public class BlankRequestFilter extends OncePerRequestFilter{
 
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {
+
         filterChain.doFilter(new HttpServletRequestWrapper(request){
             @Override
             public String getParameter(String name) {

@@ -41,5 +41,8 @@
 	<!--如果找不到对应的 controller 则去找静态文件，不配置则会404-->
 	<mvc:default-servlet-handler/>
 
+    <mvc:interceptors>
+        <bean class="com.yyq.holiday.web.Interceptor.BlankInterceptor"/>
+    </mvc:interceptors>
 </beans>
 	
