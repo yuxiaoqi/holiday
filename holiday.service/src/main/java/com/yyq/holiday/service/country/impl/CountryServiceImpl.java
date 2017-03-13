@@ -22,7 +22,7 @@ import javax.annotation.Resource;
 @Slf4j
 public class CountryServiceImpl implements CountryService{
 
-    @Resource
+    @Autowired
     private CountryManager countryManager;
     /**
      * 通过编号查询国家信息

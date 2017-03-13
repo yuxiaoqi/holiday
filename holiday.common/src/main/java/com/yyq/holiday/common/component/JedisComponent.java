@@ -9,9 +9,11 @@ import redis.clients.jedis.Jedis;
 
 import java.util.Arrays;
 import java.util.List;
-
 /**
- * Created by echo on 15-8-27.
+ * @Dscription:
+ * @Created: yyq
+ * @Date: 2017/1/22 14:58
+ * @version: 1.0.0.0
  */
 @Component
 public class JedisComponent {
