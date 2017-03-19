@@ -18,11 +18,6 @@
         </dependency>
         <dependency>
             <groupId>yyq.com</groupId>
-            <artifactId>holiday.manager</artifactId>
-            <version>1.0-SNAPSHOT</version>
-        </dependency>
-        <dependency>
-            <groupId>yyq.com</groupId>
             <artifactId>holiday.common</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>

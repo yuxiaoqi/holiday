@@ -1,5 +1,7 @@
 package com.yyq.holiday.test.country;
 
+import com.yyq.holiday.common.result.Result;
+import com.yyq.holiday.common.resultbo.CountryBO;
 import com.yyq.holiday.domain.entity.country.CountryDO;
 import com.yyq.holiday.service.country.CountryService;
 import lombok.extern.slf4j.Slf4j;
@@ -29,7 +31,7 @@ public class CountryTest extends AbstractTransactionalTestNGSpringContextTests {
     @Test
     public void testGetInfo(){
         String code = "ABW";
-        CountryDO countryDO = countryService.queryCountryDOByCode(code);
-        log.info("test---结果{}",countryDO);
+        Result<CountryBO> result = countryService.queryCountryDOByCode(code);
+        log.info("test---结果{}",result);
     }
 }
