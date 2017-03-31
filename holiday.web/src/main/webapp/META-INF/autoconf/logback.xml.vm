@@ -126,6 +126,11 @@
     <logger name="com.alibaba.dubbo.registry.zookeeper.ZookeeperRegistry" additivity="false">
         <level value="ERROR" />
     </logger>
+
+    <logger name="arms_log" level="INFO">
+        <appender-ref ref="COMMON"/>
+    </logger>
+
     <root>
         <level value="${yyq_log_level}" />
         <appender-ref ref="COMMON" />
