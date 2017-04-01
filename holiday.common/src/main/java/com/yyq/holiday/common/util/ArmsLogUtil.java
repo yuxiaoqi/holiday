@@ -1,5 +1,6 @@
 package com.yyq.holiday.common.util;
 
+import com.alibaba.fastjson.JSON;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
@@ -23,7 +24,7 @@ public class ArmsLogUtil {
             propertiesMap.put("capital", properties.containsKey("capital") ? properties.get("capital") : "0");
             propertiesMap.put("message", properties.containsKey("message") ? properties.get("message") : "");
 
-//            armslogger.info(JSON.toJSONString(propertiesMap));
+           armslogger.info(JSON.toJSONString(propertiesMap));
         } catch (Exception e) {
 
         }

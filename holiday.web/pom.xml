@@ -72,7 +72,7 @@
                     <!-- 要进行AutoConfig的目标文件，默认为${project.artifact.file}。 <dest>${project.artifact.file}</dest> -->
                     <!-- 配置后，是否展开目标文件，默认为false，不展开。 <exploding>true</exploding> -->
                     <!-- 展开到指定目录，默认为${project.build.directory}/${project.build.finalName}。 <explodedDirectory> ${project.build.directory}/${project.build.finalName} </explodedDirectory> -->
-                    <userProperties>${user.home}/yyq.properties</userProperties>
+                    <userProperties>D:/yyq/yyq.properties</userProperties>
                 </configuration>
                 <executions>
                     <execution>
@@ -86,4 +86,19 @@
 
         </plugins>
     </build>
+    <repositories>
+        <repository>
+            <id>alimaven</id>
+            <name>aliyun maven</name>
+            <url>http://maven.aliyun.com/nexus/content/groups/public/</url>
+        </repository>
+        <repository>
+            <id>jcenter</id>
+            <name>jcenter Repository</name>
+            <url>http://jcenter.bintray.com/</url>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
 </project>

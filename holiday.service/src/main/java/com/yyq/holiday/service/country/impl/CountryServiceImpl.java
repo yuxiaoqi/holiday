@@ -6,6 +6,8 @@ import com.yyq.holiday.domain.entity.country.CountryDO;
 import com.yyq.holiday.manager.country.CountryManager;
 import com.yyq.holiday.service.country.CountryService;
 import lombok.extern.slf4j.Slf4j;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -22,6 +24,8 @@ import javax.annotation.Resource;
 @Slf4j
 public class CountryServiceImpl implements CountryService{
 
+    private static final Logger log = LoggerFactory.getLogger(CountryServiceImpl.class);
+
     @Autowired
     private CountryManager countryManager;
     /**
@@ -34,6 +38,9 @@ public class CountryServiceImpl implements CountryService{
     public Result<CountryBO> queryCountryDOByCode(String code) {
         //参数校验
         log.info("参数校验方法开始==>{}",code);
+        if (1==1){
+            throw new RuntimeException("yunxing");
+        }
         CountryDO countryDO = countryManager.queryCountryDOByCode(code);
         log.info("方法结束调用");
         return Result.wrapSuccessfulResult(this.convertcountryDO2BO(countryDO));

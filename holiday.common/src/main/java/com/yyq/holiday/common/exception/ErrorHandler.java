@@ -31,27 +31,26 @@ public class ErrorHandler {
     @Autowired
     private ArmsLogUtil armsLogUtil;
 
-/*
-    */
+
 /**
      * 业务级异常的捕获
      *
-     * @param e
+     * @param
      * @return
      * @throws Exception
-     *//*
+     */
 
-    @ExceptionHandler(value = Exception.class)
+    @ExceptionHandler(value = RuntimeException.class)
     @ResponseStatus(value = HttpStatus.OK)
     @ResponseBody
-    public void applicationErrorHandler(ApplicationException e) throws Exception {
+    public void applicationErrorHandler(RuntimeException e) throws Exception {
         LOGGER.warn("异常信息为：{}", e);
         Map<String, Object> properties = new HashMap<String, Object>();
-        properties.put("message", "errorId:"+e.getErrorId()+","+e.getMessage());
-        armsLogUtil.track(AramsTypeEnums.APPLICATION_EXCPTION.getValue(), properties);
+        properties.put("message", e.getMessage());
+        armsLogUtil.track("tettetetete", properties);
     }
 
-    */
+
 /**
      * 业务级异常的捕获
      *
