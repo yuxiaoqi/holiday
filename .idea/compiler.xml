@@ -2,6 +2,7 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <resourceExtensions />
+    <wildcardResourcePatterns />
     <annotationProcessing>
       <profile default="true" name="Default" enabled="false">
         <processorPath useClasspath="true" />
@@ -25,7 +26,7 @@
         <module name="holiday.common" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel target="1.7">
+    <bytecodeTargetLevel target="1.8">
       <module name="holiday" target="1.5" />
       <module name="holiday.common" target="1.7" />
       <module name="holiday.dao" target="1.5" />
