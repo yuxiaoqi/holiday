@@ -10,7 +10,7 @@
 	<import resource="spring-mvc.xml"/>
 
     <!--<context:component-scan base-package="com.tqmall.safeguard"/>-->
-
+	SUPERADMIN
 
 	<import resource="data-context.xml" />
     <!--<import resource="spring-servlet.xml"/>-->
