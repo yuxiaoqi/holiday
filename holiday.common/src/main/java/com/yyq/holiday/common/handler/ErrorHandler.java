@@ -1,23 +1,17 @@
-package com.yyq.holiday.common.exception;
+package com.yyq.holiday.common.handler;
 
 import com.yyq.holiday.common.util.ArmsLogUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
-import org.springframework.validation.BindException;
-import org.springframework.validation.ObjectError;
-import org.springframework.web.bind.MethodArgumentNotValidException;
-import org.springframework.web.bind.MissingServletRequestParameterException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.ResponseStatus;
 
 import javax.servlet.http.HttpServletRequest;
-import java.nio.file.AccessDeniedException;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 /**
@@ -135,7 +129,7 @@ public class ErrorHandler {
 
     */
 /**
-     * motan exception 异常处理
+     * motan handler 异常处理
      *
      * @param e
      * @return
@@ -154,7 +148,7 @@ public class ErrorHandler {
 */
 
     /**
-     * exception 异常处理
+     * handler 异常处理
      *
      * @param e
      * @return
