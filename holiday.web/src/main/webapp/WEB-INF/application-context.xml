@@ -24,13 +24,13 @@
 	<import resource="data-context.xml" />
     <!--<import resource="spring-servlet.xml"/>-->
     <import resource="mybatis-config.xml" />
+	<import resource="spring-aop.xml"/>
+	<import resource="spring-quartz-servlet.xml"/>
 	<!--<import resource="remote-service.xml" />-->
 	<!--<import resource="openid-config.xml" />-->
     <!--<import resource="spring-mvc.xml" />-->
     <!--<import resource="message-config.xml"/>-->
-    <!--<import resource="quartz.xml"/>-->
     <!--<import resource="schedule-config.xml"/>-->
-    <!--<import resource="aop-service.xml"/>-->
     <!--<import resource="shared-session.xml"/>-->
     <!--<import resource="dubbo-consume.xml"/>-->
     <!--<import resource="dubbo-provider.xml"/>-->
