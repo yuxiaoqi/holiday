@@ -1,9 +1,10 @@
 package com.yyq.holiday.domain.entity.country;
 
+import com.yyq.holiday.domain.entity.base.BaseEntity;
 import lombok.Data;
 
 @Data
-public class CountryDO {
+public class CountryDO extends BaseEntity{
     /**
      * <pre>
      * 

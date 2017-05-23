@@ -6,7 +6,6 @@
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd"
 	   default-lazy-init="true">
 	<context:property-placeholder location="/WEB-INF/application.properties" />
-	<import resource="spring-mvc.xml"/>
 
 	<!--线程池-->
 	<bean id="threadPoolTaskExecutor" class="org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor">
@@ -21,7 +20,7 @@
 	</bean>
 
 
-
+	<import resource="spring-mvc.xml"/>
 	<import resource="data-context.xml" />
     <!--<import resource="spring-servlet.xml"/>-->
     <import resource="mybatis-config.xml" />
