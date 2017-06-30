@@ -33,3 +33,4 @@ holiday.web/target/tomcat/work/
 /holiday.web/target/
 
 !/.gitignore
+/holiday.dao/holiday.dao.iml
